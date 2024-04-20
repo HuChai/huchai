@@ -1,20 +1,25 @@
 <!DOCTYPE html>
-<html lang="en">
+<html>
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>跳转网站示例</title>
+  <title>一个神秘的网站</title>
+  <style>
+    #video-container {
+      display: none;
+    }
+  </style>
 </head>
 <body>
-    <h1>欢迎访问我们的网站</h1>
-    <p>点击下面的按钮跳转到另一个网站：</p>
-    <button onclick="redirectToOtherSite()">跳转</button>
-
-    <script>
-        function redirectToOtherSite() {
-            // 使用 JavaScript 的 window.location.href 实现跳转
-            window.location.href = 'http://magic.vicp.io';  // 在这里替换成你要跳转的网站地址
-        }
-    </script>
+  <button onclick="showVideo()">一个神秘的按钮</button>
+  <div id="video-container">
+    <video width="960" height="540" controls>
+      <source src="video.mp4" type="video/mp4">
+      您的浏览器不支持播放视频。
+    </video>
+  </div>
+  <script>
+    function showVideo() {
+      document.getElementById('video-container').style.display = 'block';
+    }
+  </script>
 </body>
 </html>
